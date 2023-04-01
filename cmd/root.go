@@ -61,6 +61,8 @@ func init() {
 	rootCmd.Flags().DurationP("pomo", "p", 25*time.Minute, "Pomomdoro Duration")
 	rootCmd.Flags().DurationP("short", "s", 5*time.Minute, "short break duration")
 	rootCmd.Flags().DurationP("long", "l", 15*time.Minute, "long break Duration")
+	rootCmd.Flags().StringP("db", "d", "pomod.db", "Database file")
+	viper.BindPFlag("db", rootCmd.Flags().Lookup("db"))
 	viper.BindPFlag("pomo", rootCmd.Flags().Lookup("pomo"))
 	viper.BindPFlag("short", rootCmd.Flags().Lookup("short"))
 	viper.BindPFlag("long", rootCmd.Flags().Lookup("long"))
