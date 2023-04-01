@@ -1,3 +1,4 @@
+// + build inmemory
 package repository
 
 import (
